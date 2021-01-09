@@ -1,14 +1,22 @@
-package gmit.ie.sw;
+package ie.gmit.sw;
 
 import java.awt.image.BufferedImage;
 
-public class ImageDetails {
+/**
+ * Image Description class contains info about the image such as it' name and path
+ * <p>
+@return image, returns BufferedImage
+@return imgName returns image name
+@return imgPath returns image path
+ */
+
+public class ImageDescription {
 	
 		BufferedImage image;
 		String imgName;
 		String imgPath;
 		
-		public ImageDetails(BufferedImage img, String name, String path) {
+		public ImageDescription(BufferedImage img, String name, String path) {
 			setImage(img);;
 			setImgPath(path);
 			setImgName(name);

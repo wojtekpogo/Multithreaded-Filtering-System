@@ -1,4 +1,12 @@
-package gmit.ie.sw;
+package ie.gmit.sw;
+
+/**
+ * Filters class contains switch statement to control which filter to choose.
+ * <p>
+ * @param num an integer value to pick one of the filters
+ * @return the kernel which is 3x3 matrix
+ *
+ */
 
 public class Filters {
 	
@@ -32,7 +40,7 @@ public class Filters {
 	
 	
 	
-public float [][] Identity(){
+private float [][] Identity(){
 		
 		float [][] kernel = {
 				{0, 0, 0},
@@ -43,7 +51,7 @@ public float [][] Identity(){
 		return kernel;
 	}
 	
-public float [][] EdgeDetection(){
+private float [][] EdgeDetection(){
 		
 		float [][] kernel = {
 				{1, 0, -1},
@@ -54,7 +62,7 @@ public float [][] EdgeDetection(){
 		return kernel;
 	}
 
-public float [][] Sharpen(){
+private float [][] Sharpen(){
 	
 	float [][] kernel = {
 			{0, -1, 0},
@@ -65,7 +73,7 @@ public float [][] Sharpen(){
 	return kernel;
 }
 
-public float [][] HorizontalLines() {
+private float [][] HorizontalLines() {
 	
 	float [][] kernel ={
 			{-1, -1, -1},
@@ -76,7 +84,7 @@ public float [][] HorizontalLines() {
 	return kernel;	
 }
 
-public float [][] Laplacian(){
+private float [][] Laplacian(){
 	
 	float [][]kernel = {
 			{0, -1, 0},
@@ -88,7 +96,7 @@ public float [][] Laplacian(){
 	return kernel;
 }
 
-public float [][] VerticalLines(){
+private float [][] VerticalLines(){
 	
 	float [][]kernel = {
 			{-1, 2, -1},
@@ -98,7 +106,7 @@ public float [][] VerticalLines(){
 	return kernel;
 }
 
-public float [][] Diagonal45Lines(){
+private float [][] Diagonal45Lines(){
 	
 	float[][] kernel = {
 			{-1, -1, 2},
@@ -109,7 +117,7 @@ public float [][] Diagonal45Lines(){
 	return kernel;
 }
 
-public float [][] SobelVertical(){
+private float [][] SobelVertical(){
 	
 	
 	float [][] kernel = {
